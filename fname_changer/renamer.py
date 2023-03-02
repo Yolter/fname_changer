@@ -1,4 +1,4 @@
-def translit(file):
+def translit(file: str) -> dict:
     translit_dict = {}
     flow = open(file).read().splitlines()
     for line in flow:
