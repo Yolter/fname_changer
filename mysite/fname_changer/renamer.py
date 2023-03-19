@@ -40,8 +40,8 @@ def translator_ru_en(content: str, table_ru_en: dict) -> str:
 def renamer(folder: str, translit_table: dict) -> None:
     """если имя файла или теги содержат кириллические символы,
      заменяет их латинской транслитерацией
-     атрибут folder ожидает абсолютный путь каталога, содержащий файлы .mp3
-     """
+     атрибут folder ожидает абсолютный путь каталога, содержащий файлы
+    с расширением .mp3"""
     # проверяем существование указанного пути
     if Path(folder).exists():
         # получаем путь каждого файла
@@ -61,6 +61,6 @@ def renamer(folder: str, translit_table: dict) -> None:
 
 if __name__ == '__main__':
     transliter = table_convert(
-        '/home/yolter/Dev/fname_changer/transliteration_ru_en.txt')
+        '/transliteration_ru_en.txt')
     # print(transliter)
     renamer('/home/yolter/Downloads/тест', transliter)
